@@ -82,7 +82,6 @@ async function saveData() {
     body: JSON.stringify(data)
   });
 
-  alert("Gespeichert");
 }
 
 loadData();
