@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";
+const API = "https://wg-proxy.onrender.com";
 
 let data = null;
 
