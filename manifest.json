@@ -1,6 +1,6 @@
 {
-  "name": "WG Putzplan",
-  "short_name": "Putzplan",
+  "name": "WG App",
+  "short_name": "WG App",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#111827",
