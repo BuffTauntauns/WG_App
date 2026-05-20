@@ -26,8 +26,9 @@ function render() {
 
     const checkbox = div.querySelector("input");
 
-    checkbox.addEventListener("change", () => {
-      data.currentWeek.assignments[index].done = checkbox.checked;
+    checkbox.addEventListener("change", async () => {
+        data.currentWeek.assignments[index].done = checkbox.checked;
+        await saveData();
     });
 
     tasksContainer.appendChild(div);
