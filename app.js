@@ -1,3 +1,5 @@
+console.log("NEW APP.JS LOADED");
+
 const API = "https://wg-proxy.onrender.com";
 
 let data = null;
