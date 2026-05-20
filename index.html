@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WG Putzplan</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>WG Putzplan</h1>
+
+    <div class="card">
+      <h2>Aktuelle Woche</h2>
+      <div id="tasks"></div>
+    </div>
+
+    <div class="card">
+      <h2>Historie</h2>
+      <div id="history"></div>
+    </div>
+
+    <div class="card">
+      <h2>Notizen</h2>
+      <ul id="notes"></ul>
+    </div>
+
+    <button onclick="saveData()">Speichern</button>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
