@@ -32,16 +32,36 @@ function getWeekDateRange() {
 }
 
 function rotateAssignmentsForWeek(weekNumber) {
-  const tasks = ["Bad", "Saugen", "Küche"];
-  const people = ["Jonathan", "Jakob", "Leon"];
+  const baseAssignments = [
+    {
+      person: "Jonathan",
+      task: "Bad",
+    },
+    {
+      person: "Jakob",
+      task: "Saugen",
+    },
+    {
+      person: "Leon",
+      task: "Küche",
+    },
+  ];
 
-  const offset = (weekNumber - 21) % people.length;
+  const offset = (weekNumber - 21) % baseAssignments.length;
 
-  return tasks.map((task, index) => ({
-    person: people[(index + offset) % people.length],
-    task,
-    done: false,
-  }));
+  return baseAssignments.map((_, index) => {
+    const rotated =
+      baseAssignments[
+        (index - offset + baseAssignments.length) %
+          baseAssignments.length
+      ];
+
+    return {
+      person: rotated.person,
+      task: baseAssignments[index].task,
+      done: false,
+    };
+  });
 }
 
 async function ensureCorrectWeek() {
